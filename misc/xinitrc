@@ -1,0 +1,5 @@
+sxhkd &
+picom -f &
+slstatus &
+xwallpaper --zoom ~/pix/wall/wall.png &
+exec dwm

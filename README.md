@@ -16,7 +16,7 @@
 <br>
 
 </div>
-- recommended to instalar on fresh arch install but it will work otherwise 
+- recommended to install on fresh arch install but it will work otherwise 
 
 - 👀these the config files for dwm desktop
   

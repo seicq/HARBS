@@ -17,10 +17,15 @@
 
 </div>
 - recommended to instalar on fresh arch install but it will work otherwise 
-- 👀these the config files for dwm desktop.
-- 🔭clones the repo
+
+- 👀these the config files for dwm desktop
+  
+- 🔭clone the repo
+  
 - just run the install.sh
-- sit back and relax 
+  
+- sit back and relax
+  
 - 💥 you got your beautiful dwm setup
 
 

@@ -1,5 +1,18 @@
 #!/bin/sh
 
+# Functions ~
+install_brillo(){
+	git clone https://github.com/CameronNemo/brillo.git $HOME/brillo
+	cd $HOME/brillo
+	make
+	sudo make install.setgid
+	sudo rm -rf $HOME/brillo
+}
+
+install_zsh(){
+	sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+}
+
 # Variables ~
 cdr="$HOME/.config"
 hc="$HOME/harbs/config"
@@ -43,3 +56,6 @@ for i in "${progi[@]}"
 do
 	cd $cdr/suckless/$i && sudo cp config.def.h config.h && sudo make install
 done
+
+install_brillo
+install_zsh

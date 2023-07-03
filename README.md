@@ -21,19 +21,21 @@
 - 👀these the config files for dwm desktop
   
 - 🔭clone the repo
-  
-- just run the install.sh
-  
-- sit back and relax
-  
--  you got your beautiful dwm setup
-
 ```yaml
 # clone the repo, before that install git
 $ git clone https://github.com/singh-vikal/harbs
+```
+```
 # cd in harbs
 $ cd harbs
+```
+- just run the install.sh
+```
 # running the script 
 $ chmod +x install.sh
 $ ./install.sh
 ```
+- sit back and relax
+-  you got your beautiful dwm setup
+
+

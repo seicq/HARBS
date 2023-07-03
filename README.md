@@ -16,7 +16,7 @@
 <br>
 
 </div>
-- recommended to install on fresh arch install but it will work otherwise 
+- its recommended to install on fresh arch install but it will work otherwise 
 
 - 👀these the config files for dwm desktop
   
@@ -26,10 +26,7 @@
   
 - sit back and relax
   
-- 💥 you got your beautiful dwm setup
-
-
-- Clone this repository & get your dwm setup.😊
+-  you got your beautiful dwm setup
 
 ```yaml
 # clone the repo, before that install git

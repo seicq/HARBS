@@ -2,7 +2,8 @@
 
 cdr="$HOME/.config"
 hc="$HOME/harbs/config"
-hm="$HOME/harbs/misc"
+hm="$HOME/harbs/misc/media"
+hs="$HOME/harbs/misc/script"
 usname=$(whoami)
 
 
@@ -46,5 +47,6 @@ make_dirs(){
 	mkdir -p $HOME/pix/wall 
 	cp -r $hc/* $cdr/
 	cp $hm/wall.png $HOME/pix/wall/
+	cp $hs/xinitrc $HOME/.xinitrc
 }
 

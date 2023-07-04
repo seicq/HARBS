@@ -8,7 +8,7 @@ usname=$(whoami)
 
 mirrors(){
 	read -p "Your Country [ To refresh pacman mirrorlist ](example - India): " cnt
-	sudo pacman -S reflector rsync
+	sudo pacman -S reflector rsync --noconfirm
 	clear && echo "Refreshing mirrorlist for $cnt"
 	sudo reflector -c $cnt -a 5 --sort rate --save /etc/pacman.d/mirrorlist >/dev/null
 }
@@ -29,21 +29,22 @@ install_base(){
 	file="$hs/prog.csv"
 	for i in $(awk -F',' '{print $2}' "$file")
 	do
-    		sudo pacman -S "$i"
+    		sudo pacman -S "$i" --noconfirm
 	done
 	neofetch # this will create .config dir
 }
 
 install_wm(){	
-	progi=("dwm" "st" "dmenu" "slstatus" "slock")
+	progi=("dwm" "st" "dmenu" "slstatus")
 	for i in "${progi[@]}"
 	do
-		cd $cdr/suckless/$i && sudo cp config.def.h config.h && sudo make install
+		clear && echo "Installing dwm, dmenu, st and slstatus"
+		cd $cdr/suckless/$i && sudo cp config.def.h config.h && sudo make install >/dev/null
 	done
 }
 
 make_dirs(){
-	mkdir -p $HOME/pix/wall 
+	mkdir -p $HOME/pix/wall $HOME/pix/ss
 	cp -r $hc/* $cdr/
 	cp $hm/wall.png $HOME/pix/wall/
 	cp $hs/xinitrc $HOME/.xinitrc

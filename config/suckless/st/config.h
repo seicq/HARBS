@@ -92,10 +92,8 @@ char *termname = "st-256color";
  *	stty tabs
  */
 unsigned int tabspaces = 8;
-/* gruvbox-dark colorscheme */
 
-/* bg opacity */
-float alpha = 0.9;
+/* gruvbox-dark colorscheme */
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
@@ -125,7 +123,7 @@ static const char *colorname[] = {
 unsigned int defaultfg = 15;
 unsigned int defaultbg = 0;
 unsigned int defaultcs = 15;
-unsigned int defaultrcs = 15;
+static unsigned defaultrcs = 15;
 /*
  * Default shape of cursor
  * 2: Block ("█")
@@ -185,14 +183,16 @@ static Shortcut shortcuts[] = {
 	{ ControlMask,          XK_Print,       toggleprinter,  {.i =  0} },
 	{ ShiftMask,            XK_Print,       printscreen,    {.i =  0} },
 	{ XK_ANY_MOD,           XK_Print,       printsel,       {.i =  0} },
-	{ TERMMOD,              XK_KP_Add,      zoom,           {.f = +1} },
-	{ TERMMOD,              XK_KP_Subtract, zoom,           {.f = -1} },
+	{ TERMMOD,              XK_K,           zoom,           {.f = +1} },
+	{ TERMMOD,              XK_J,           zoom,           {.f = -1} },
 	{ TERMMOD,              XK_Home,        zoomreset,      {.f =  0} },
 	{ TERMMOD,              XK_C,           clipcopy,       {.i =  0} },
 	{ TERMMOD,              XK_V,           clippaste,      {.i =  0} },
 	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
 	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
+	{ ShiftMask,            XK_Up,     kscrollup,      {.i = -1} },
+	{ ShiftMask,            XK_Down,   kscrolldown,    {.i = -1} },
 };
 
 /*

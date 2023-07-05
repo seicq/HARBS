@@ -1,5 +1,6 @@
 [ -f "$HOME/harbs/misc/script/funcrc" ] && source "$HOME/harbs/misc/script/funcrc"
 
+install yay
 install_base
 make_dirs
 install_wm

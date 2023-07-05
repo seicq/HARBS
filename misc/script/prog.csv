@@ -27,4 +27,5 @@ M, qbittorrent,
 M, sxiv,
 M, mpv,
 M, git,
-M, go-md2man
+M, go-md2man,
+A, brave-bin,

@@ -27,9 +27,7 @@ install_yay(){
 }
 
 install_base(){
-	file="$HOME/harbs/static/prog.csv"
-	for i in $(awk -F',' '{print $2}' "$file")
-	do
+	file="$HOME/harbs/static/prog.csv" for i in $(awk -F',' '{print $2}' "$file") do
     		sudo pacman -S "$i" --noconfirm
 	done
 }
@@ -46,6 +44,7 @@ install_wm(){
 mk_dirs(){
 	mkdir -p $HOME/pix/wall $HOME/pix/ss
 	mkdir -p $HOME/.config $HOME/.local/share $HOME/.local/state
+	mkdir $HOME/.config/git
 }
 
 cp_files(){
@@ -55,4 +54,12 @@ cp_files(){
 
 install_zsh(){
 	sudo cp $HOME/boiled-rice/tmp/zshenv /etc/zsh/
+	chsh -s /bin/zsh
+}
+
+clean_up(){
+	rm -rf $HOME/boiled-rice
+	rm .bash_history .bash_profile .bashrc .bash_logout
+	clear && echo "Installation over, cleaning up ~/ . harbs folder can be deleted after this"
+	sleep 4s
 }

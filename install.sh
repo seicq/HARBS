@@ -2,7 +2,7 @@
 
 install yay
 install_base
-make_dirs
+make_dir
 install_wm
 install_zsh
 install_brillo

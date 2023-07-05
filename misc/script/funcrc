@@ -4,7 +4,6 @@ cdr="$HOME/.config"
 hc="$HOME/harbs/config"
 hm="$HOME/harbs/misc/media"
 hs="$HOME/harbs/misc/script"
-usname=$(whoami)
 
 mirrors(){
 	read -p "Your Country [ To refresh pacman mirrorlist ](example - India): " cnt
@@ -22,6 +21,7 @@ install_brillo(){
 }
 
 install_zsh(){
+	sudo mkdir /etc/zsh && sudo touch /etc/zsh/zshenv
 	sudo echo "ZDOTDIR="$HOME/.config/zsh"" >> /etc/zsh/zshenv
 	chsh -s /bin/zsh
 }
@@ -31,7 +31,6 @@ install_yay(){
 	cd $HOME/yay
 	makepkg -si
 	sudo rm -rf $HOME/yay
-
 }
 
 install_base(){
@@ -52,7 +51,7 @@ install_wm(){
 }
 
 mk_dir(){
-	mkdir -p $HOME/.config $HOME/.local/bin $HOME/.local/state $HOME/.cache
+	mkdir -p $HOME/.config $HOME/.local/bin $HOME/.local/state $HOME/.cache $HOME/pix/wall
 	cp -r $hc/* $cdr/
 	cp $hm/wall.png $HOME/pix/wall/
 }

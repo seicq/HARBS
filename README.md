@@ -11,7 +11,7 @@
 | Terminal            | Alacritty  & st   |
 <div align="center">
 <h3> Dotfiles⚡💞️ <h3>
-<img src="/images/IMG_20230705_080551_895.png" alt="Image" width=100%>
+<img src="/misc/IMG_20230705_080551_895.png" alt="Image" width=100%>
 
 
 <br>

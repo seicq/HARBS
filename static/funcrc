@@ -6,7 +6,7 @@ bmdr="$HOME/boiled-rice/media"
 
 mirrors(){
 	read -p "Your Country [ To refresh pacman mirrorlist ](example - India): " cnt
-	sudo pacman -S reflector rsync --noconfirm
+	sudo pacman -S archlinux-keyring gnome-keyring reflector rsync --noconfirm
 	clear && echo "Refreshing mirrorlist for $cnt"
 	sudo reflector -c $cnt -a 5 --sort rate --save /etc/pacman.d/mirrorlist >/dev/null
 }
@@ -27,7 +27,9 @@ install_yay(){
 }
 
 install_base(){
-	file="$HOME/harbs/static/prog.csv" for i in $(awk -F',' '{print $2}' "$file") do
+	file="$HOME/harbs/static/prog.csv" 
+	for i in $(awk -F',' '{print $2}' "$file") 
+	do
     		sudo pacman -S "$i" --noconfirm
 	done
 }
@@ -42,8 +44,8 @@ install_wm(){
 }
 
 mk_dirs(){
-	mkdir -p $HOME/pix/wall $HOME/pix/ss
-	mkdir -p $HOME/.config $HOME/.local/share $HOME/.local/state
+	mkdir -p $HOME/pix/wall $HOME/pix/ss $HOME/music
+	mkdir -p $HOME/.config $HOME/.local/share $HOME/.local/state $HOME/.local/bin
 	mkdir $HOME/.config/git
 }
 
@@ -58,8 +60,37 @@ install_zsh(){
 }
 
 clean_up(){
-	rm -rf $HOME/boiled-rice
 	rm .bash_history .bash_profile .bashrc .bash_logout
 	clear && echo "Installation over, cleaning up ~/ . harbs folder can be deleted after this"
+	rm -rf $HOME/boiled-rice $HOME/harbs
 	sleep 4s
+}
+
+graphic_driver()
+{
+echo "Graphic Drivers: "
+echo "1. AMD 		2. INTEL 		3. NVIDIA"
+read -p "Enter your choice [Default 1]: " choice
+
+case $choice in
+  1)
+    sudo pacman -S xf86-video-amdgpu
+    ;;
+  2)
+    sudo pacman -S xf86-video-intel
+    ;;
+  3)
+    sudo pacman -S nvidia nvidia-utils
+    ;;
+  *)
+    sudo pacman -S xf86-video-amdgpu 
+    ;;
+esac
+}
+
+srvces(){
+	systemctl enable NetworkManager
+	systemctl enable bluetooth
+	systemctl enable cups
+	systemctl --user enable mpd
 }

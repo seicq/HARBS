@@ -11,6 +11,7 @@
 | Terminal            | Alacritty  & st   |
 <div align="center">
 <h3> Dotfiles⚡💞️ <h3>
+<img src="/images/IMG_20230705_080551_895.png" alt="Image" width=100%>
 
 
 <br>
@@ -18,24 +19,33 @@
 </div>
 - its recommended to install on fresh arch install but it will work otherwise 
 
-- 👀these the config files for dwm desktop
+
   
-- 🔭clone the repo
+#### Steps to Install My Configaration 
+
 ```yaml
-# clone the repo, before that install git
-$ git clone https://github.com/singh-vikal/harbs
-```
-```
-# cd in harbs
-$ cd harbs
-```
-- just run the install.sh
-```
-# running the script 
-$ chmod +x install.sh
+$ mkdir suckless 
+$ cd suckless/
+$ git clone git://github.com/singh-vikal/harbs
+$ cd harbs/
+$ sudo chmod +x install.sh
 $ ./install.sh
 ```
-- sit back and relax
--  you got your beautiful dwm setup
+Now Sit Back and Relax. You just have to select Yes at some places and this script will give you a beautiful Dwm setup with dmenu, st, alacritty, slstatus, Brave browser, mpv, audio setup, and other daily required packages.
 
 
+
+#### Links 
+
+ - [Dynamic Window Manager (DWM)](https://dwm.suckless.org/)
+ - [Suckless](https://suckless.org/)
+ - [Simple Terminal](https://st.suckless.org/)
+ - [DMenu](https://tools.suckless.org/dmenu/)
+
+I don't have comments as I don't want to manage them. You can however contact me at the below address if you want to.
+
+ - [Mail](mailto:singhvikal891@gmail.com)
+
+#### Credit:
+ - [Harsh/Sei](https://github.com/seicq)
+ - [Me](https://github.com/dingh-vikal)

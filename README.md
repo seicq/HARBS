@@ -48,4 +48,4 @@ I don't have comments as I don't want to manage them. You can however contact me
 
 #### Credit:
  - [Harsh/Sei](https://github.com/seicq)
- - [Me](https://github.com/dingh-vikal)
+ - [Me](https://github.com/singh-vikal)

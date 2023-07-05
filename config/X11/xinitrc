@@ -1,4 +1,0 @@
-picom -f & #boom
-slstatus &
-xwallpaper --zoom ~/pix/wall/wall.png &
-exec dwm

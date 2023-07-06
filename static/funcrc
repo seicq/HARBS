@@ -45,11 +45,12 @@ install_wm(){
 
 mk_dirs(){
 	mkdir -p $HOME/pix/wall $HOME/pix/ss $HOME/music
-	mkdir -p $HOME/.config $HOME/.local/share $HOME/.local/state $HOME/.local/bin
+	mkdir -p $HOME/.config $HOME/.local/state
 	mkdir $HOME/.config/git
 }
 
 cp_files(){
+	cp -r $HOME/boiled-rice/local/* $HOME/.local/
 	cp -r $bcdr/* $cdr/
 	cp -r $bmdr/wall.png $HOME/pix/wall/wall.png
 }

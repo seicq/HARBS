@@ -2,6 +2,14 @@
 
 git clone https://github.com/seicq/boiled-rice $HOME/boiled-rice
 
+reap -p "Do you use artix ? (Y/n)" choice
+case $choice in
+	Y)
+		artix;;
+	n)
+		echo " "
+esac
+
 mirrors
 install_yay
 install_base

@@ -1,5 +1,0 @@
-sxhkd & #simple x hotkey daemon
-picom -f & #comositor for x
-slstatus & #status bar buffer for dwm
-xwallpaper --zoom ~/pix/wall/wall.png & #wallpaper utility
-exec dwm

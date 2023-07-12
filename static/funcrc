@@ -6,7 +6,7 @@ bmdr="$HOME/boiled-rice/media"
 
 mirrors(){
 	read -p "Your Country [ To refresh pacman mirrorlist ](example - India): " cnt
-	sudo pacman -S archlinux-keyring gnome-keyring reflector rsync --noconfirm
+	sudo pacman -S archlinux-keyring reflector rsync --noconfirm
 	clear && echo "Refreshing mirrorlist for $cnt"
 	sudo reflector -c $cnt -a 5 --sort rate --save /etc/pacman.d/mirrorlist >/dev/null
 }
@@ -47,13 +47,11 @@ mk_dirs(){
 	mkdir -p $HOME/pix/wall $HOME/pix/ss $HOME/music
 	mkdir -p $HOME/.config $HOME/.local/state
 	mkdir $HOME/.config/git
-}
-
-cp_files(){
 	cp -r $HOME/boiled-rice/local/* $HOME/.local/
 	cp -r $bcdr/* $cdr/
 	cp -r $bmdr/wall.png $HOME/pix/wall/wall.png
 }
+
 
 install_zsh(){
 	sudo cp $HOME/boiled-rice/tmp/zshenv /etc/zsh/
